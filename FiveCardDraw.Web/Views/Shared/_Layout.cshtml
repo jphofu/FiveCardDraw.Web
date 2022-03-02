@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    @*<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - FiveCardDraw.Web</title>*@
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <form method="post">
+        <div class="text-center">
+            <h1 class="display-4">POKER GAME</h1>
+            <h1 class="display-7">Five Card Draw</h1>
+            <p style="font-size:100px">	&#x1F0C6; &#x1F0BE; &#x1F0D1; &#x1F0A1;</p>
+            <p>
+
+        </div>
+        <p>
+        </p>
+        <div class="text-center">
+            <button type="Submit" class=" btn btn-primary" asp-area="" asp-controller="Game" asp-action="Shuffle">Shuffle</button>
+            <button type="submit" class=" btn btn-primary" asp-area="" asp-controller="Game" asp-action="DealAndEvaluateHand">Deal & Evaluate Hand</button>
+        </div>
+        <p>
+        </p>
+        <div>
+
+
+            <div class="container">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
+    </form>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
